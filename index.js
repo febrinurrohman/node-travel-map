@@ -19,6 +19,6 @@ mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopol
 app.use("/api/pins", pinRoute);
 app.use("/api/users", userRoute);
 
-app.listen(8800, () => {
+app.listen(process.env.PORT || 80, () => {
     console.log("Backend server is running!");
 });
